@@ -1,0 +1,45 @@
+
+
+//built in functions end in fn
+
+//print
+printfn "hi there!"
+
+
+//lists
+//lists are static 
+//all lists contain only one type of element
+
+lst = [1;2;3]
+lst = [1::2::3]
+
+
+//functions are defined by 'let'
+//variables are separated by spaces
+
+let GreetFunction phrase = 
+    printfn phrase
+
+GreetFunction "Hello!"
+
+let MultiFunction character = 
+    printfn character * 5
+
+MultiFunction a
+
+
+//variables are static by default
+//use 'mutable' key word to make dynamic
+//use  '<-' to assign new values to dynamic varriables
+let var1 = 10
+printfn var1
+
+let mutable var2 = 8
+var2 <- 9
+printfn var2
+
+let var3 = var2
+
+let mutable var4 = 0
+var4 <- var2
+
