@@ -1,4 +1,5 @@
-
+//comments are made using "//" (obviously lol)
+//F# uses camelCase
 
 //built in functions end in fn
 
@@ -10,22 +11,37 @@ printfn "hi there!"
 //lists are static 
 //all lists contain only one type of element
 
-lst = [1;2;3]
-lst = [1::2::3]
+//"[1;3;4.2]" does NOT work
 
+lst = [1;2;3]
+lst2 = [1::2::3]
+lstFlt = [1.0;2.3;2.48]
+lstStr = ["word"; "some other phrase"; "yet another phrase"; "2"; "3.4"]
+
+
+//"Entry points" are where coe execution formally starts
+
+[<EntryPoint>]
 
 //functions are defined by 'let'
 //variables are separated by spaces
 
-let GreetFunction phrase = 
+let GreetFn phrase = 
     printfn phrase
 
 GreetFunction "Hello!"
 
-let MultiFunction character = 
-    printfn character * 5
+//for loops are the same as in python, except that they end with "do"
 
-MultiFunction a
+let trianglefn character:string len = 
+    for length in len do
+        printfn character * len
+
+trianglefn "*" 5
+
+let multifn value1 value2 = 
+    let product = value1 * value2
+    product //returns at the end
 
 
 //variables are static by default
@@ -42,4 +58,3 @@ let var3 = var2
 
 let mutable var4 = 0
 var4 <- var2
-
