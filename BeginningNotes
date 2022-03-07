@@ -26,22 +26,23 @@ lstStr = ["word"; "some other phrase"; "yet another phrase"; "2"; "3.4"]
 //functions are defined by 'let'
 //variables are separated by spaces
 
-let GreetFn phrase = 
+let GreetFn phrase:string = 
     printfn phrase
 
 GreetFunction "Hello!"
 
 //for loops are the same as in python, except that they end with "do"
+//functions with multiple parameters must have them in parenthesis, and separated with commas
 
-let trianglefn character:string len = 
+let trianglefn (character:string, len) = 
     for length in len do
         printfn character * len
 
 trianglefn "*" 5
 
-let multifn value1 value2 = 
+let multifn (value1:integer, value2:integer) = 
     let product = value1 * value2
-    product //returns at the end
+    product %d //returns at the end
 
 
 //variables are static by default
@@ -58,3 +59,9 @@ let var3 = var2
 
 let mutable var4 = 0
 var4 <- var2
+
+
+//string assignments
+//%A--> returns anything
+//%d--> returns integers
+//%s--> returns strings
